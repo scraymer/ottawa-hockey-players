@@ -6,12 +6,12 @@ from requests import get
 from json import dumps as to_json_str
 
 CRHL_SOURCE_MAPPINGS = {
-    "column_names": {
+    'column_names': {
         'Type': 'type', 'Name': 'name', 'Locale': 'locale', 'Position': 'position',
         'Availability': 'availability', 'Skill Level': 'skill_level',
         'Minimum Notice': 'minimum_notice', 'Contact Info': 'contact_info'
     },
-    "skill_level_values": {
+    'skill_level_values': {
         'Division 1-3 (Highest)': 'High', 'Division 4-6': 'Medium', 'Division 7-30+': 'Low'
     }
 }
@@ -73,10 +73,13 @@ class FreeAgentsManager(object):
         table['phone'] = table['contact_info'].str.extract(r'(\d{3}[-\.\s]\d{3}[-\.\s]\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]\d{4}|\d{3}[-\.\s]\d{4})')
 
         # normalize skill level values based on skill level mapping
-        table = table.replace({"skill_level": CRHL_SOURCE_MAPPINGS['skill_level_values']})
+        table = table.replace({'skill_level': CRHL_SOURCE_MAPPINGS['skill_level_values']})
 
         # remove contact info column as it is not required
         table = table.drop('contact_info', axis='columns')
+
+        # add CRHL source to table
+        table['source'] = 'CRHL'
 
         # transform table into list of free agents
         agents = table.dropna().to_dict('records')
