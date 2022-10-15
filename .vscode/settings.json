@@ -1,3 +1,7 @@
 {
+    "files.associations": {
+        "*.css": "tailwindcss",
+        "*.scss": "tailwindcss"
+    },
     "python.analysis.typeCheckingMode": "basic"
 }
