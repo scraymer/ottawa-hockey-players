@@ -48,6 +48,26 @@
       "problemMatcher": [],
       "label": "npm: build",
       "detail": "ng build"
+    },
+    {
+      "type": "npm",
+      "script": "http-server",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": "$tsc",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": {
+            "regexp": "^.*Starting up http-server.*"
+          },
+          "endsPattern": {
+            "regexp": "^.*Hit CTRL-C to stop the server.*"
+          }
+        }
+      },
+      "label": "npm: http-server",
+      "detail": "http-server -p 8080 -c-1 dist/app"
     }
   ]
 }
