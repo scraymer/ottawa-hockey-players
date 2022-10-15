@@ -10,7 +10,7 @@ describe('AppShellComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ AppShellComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(AppShellComponent);
     component = fixture.componentInstance;

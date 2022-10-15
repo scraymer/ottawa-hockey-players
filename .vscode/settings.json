@@ -1,7 +1,10 @@
 {
-    "files.associations": {
-        "*.css": "tailwindcss",
-        "*.scss": "tailwindcss"
-    },
-    "python.analysis.typeCheckingMode": "basic"
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss"
+  },
+  "python.analysis.typeCheckingMode": "basic"
 }
