@@ -1,10 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+
+/* eslint-env es6 */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './src/**/*.{html,ts}'
   ],
   mode: 'jit',
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
   purge: {
     enabled: true,
     content: [
@@ -12,6 +18,10 @@ module.exports = {
     ]
   },
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      }
+    }
   }
 }
