@@ -7,6 +7,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RouterModule } from '@angular/router';
 import { FreeAgentsModule } from './free-agents/free-agents.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FreeAgentsModule } from './free-agents/free-agents.module';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     RouterModule,
+    HttpClientModule,
     FreeAgentsModule
   ],
   providers: [],

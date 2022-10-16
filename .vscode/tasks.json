@@ -19,10 +19,10 @@
         "background": {
           "activeOnStart": true,
           "beginsPattern": {
-            "regexp": "(.*?)"
+            "regexp": "^.*Generating browser application bundles.*"
           },
           "endsPattern": {
-            "regexp": "bundle generation complete"
+            "regexp": "^.*Compiled successfully.*"
           }
         }
       }
