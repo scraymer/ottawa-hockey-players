@@ -75,13 +75,6 @@
       },
       "label": "npm: http-server",
       "detail": "http-server -p 8080 -c-1 dist/app/browser"
-    },
-    {
-      "label": "npm: generate-free-agents",
-      "type": "shell",
-      "command": "'${command:python.interpreterPath}' 'scripts/generate_free_agents.py' > '${workspaceFolder}/src/assets/free-agents.json'",
-      "detail": "python scripts/generate_free_agents.py > src/assets/free-agents.json",
-      "problemMatcher": []
     }
   ]
 }
