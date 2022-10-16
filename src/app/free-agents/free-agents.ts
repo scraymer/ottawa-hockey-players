@@ -11,6 +11,11 @@ export interface IFreeAgent {
   source: FreeAgentSource
 }
 
+export interface IFreeAgentError {
+  code: number;
+  message: string;
+}
+
 export type FreeAgentType = 'Spare' | 'Free Agent';
 
 export type FreeAgentLocaleType = 'West' | 'East';
