@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FreeAgentsViewComponent } from './free-agents-view/free-agents-view.component';
 
 const routes: Routes = [
-  { title: 'Free Agents', path: 'free-agents', component: FreeAgentsViewComponent }
+  { title: 'Free Agents - Ottawa Hockey Players', path: 'free-agents', component: FreeAgentsViewComponent }
 ];
 
 @NgModule({

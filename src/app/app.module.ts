@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { FreeAgentsModule } from './free-agents/free-agents.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     }),
     RouterModule,
     HttpClientModule,
-    FreeAgentsModule
+    FreeAgentsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

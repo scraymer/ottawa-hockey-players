@@ -1,12 +1,6 @@
-<div class="relative shadow-md sm:rounded-lg">
+<div class="mt-12 relative shadow-md sm:rounded-lg" *ngIf="true">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-    <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-      Free Agents
-      <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-        Browse the list of local hockey player free agents available to play in the Ottawa national capital region.
-      </p>
-    </caption>
-    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-white dark:bg-gray-700 dark:text-gray-400">
       <tr>
         <th scope="col" class="py-3 px-6">
           Name
@@ -38,7 +32,7 @@
       </tr>
     </thead>
     <tbody *ngIf="loading === true">
-      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <tr class="border-b dark:border-gray-700">
         <td scope="row" class="py-4 px-6 text-center" colspan="9">
           <div role="status">
               <svg class="inline mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,19 +45,19 @@
       </tr>
     </tbody>
     <tbody *ngIf="loading === false && error !== null">
-      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <tr class="border-b dark:border-gray-700">
         <td scope="row" class="py-4 px-6 text-center" colspan="9">
           {{ error }}
         </td>
       </tr>
     </tbody>
     <tbody *ngIf="loading === false && error === null">
-      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngIf="items.length === 0">
+      <tr class="border-b dark:border-gray-700" *ngIf="items.length === 0">
         <td scope="row" class="py-4 px-6" colspan="9">
           No results found.
         </td>
       </tr>
-      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngFor="let item of items">
+      <tr class="border-b dark:border-gray-700" *ngFor="let item of items">
         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
           {{ item.name }}
         </th>
