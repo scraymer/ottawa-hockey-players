@@ -18,6 +18,6 @@ export class FreeAgentsService {
   get(): Observable<IFreeAgent[]> {
 
     // retrieve latest free agents data
-    return this.http.get<IFreeAgent[]>('/assets/data/free-agents.json');
+    return this.http.get<IFreeAgent[]>('assets/data/free-agents.json');
   }
 }
