@@ -7,6 +7,6 @@
 --trusted-host pypi.org
 --trusted-host files.pythonhosted.org
 
-lxml>=4.7.1,<4.8.0
+lxml>=4.9.1,<4.10.0
 pandas>=1.5.0,<1.6.0
 requests>=2.28.1,<2.29.0
