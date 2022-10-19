@@ -1,0 +1,91 @@
+{
+  "configVersion": 1,
+  "timestamp": 1666156206859,
+  "index": "/ottawa-hockey-players/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/ottawa-hockey-players/favicon.ico",
+        "/ottawa-hockey-players/index.html",
+        "/ottawa-hockey-players/main.d8c476a88cbe1b4c.js",
+        "/ottawa-hockey-players/manifest.webmanifest",
+        "/ottawa-hockey-players/polyfills.d00ba71d24f64d98.js",
+        "/ottawa-hockey-players/runtime.231e96734c9fdc57.js",
+        "/ottawa-hockey-players/styles.2a9f006cadbb6c6a.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/ottawa-hockey-players/assets/backgrounds/app-dark@30.avif",
+        "/ottawa-hockey-players/assets/backgrounds/app-dark@tinypng.png",
+        "/ottawa-hockey-players/assets/backgrounds/app@30.avif",
+        "/ottawa-hockey-players/assets/backgrounds/app@tinypng.png",
+        "/ottawa-hockey-players/assets/data/free-agents.json",
+        "/ottawa-hockey-players/assets/icons/icon-128x128.png",
+        "/ottawa-hockey-players/assets/icons/icon-144x144.png",
+        "/ottawa-hockey-players/assets/icons/icon-152x152.png",
+        "/ottawa-hockey-players/assets/icons/icon-192x192.png",
+        "/ottawa-hockey-players/assets/icons/icon-384x384.png",
+        "/ottawa-hockey-players/assets/icons/icon-512x512.png",
+        "/ottawa-hockey-players/assets/icons/icon-72x72.png",
+        "/ottawa-hockey-players/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/ottawa-hockey-players/assets/backgrounds/app-dark@30.avif": "64c916902f317f0d3ead990b2accbac7e0232a97",
+    "/ottawa-hockey-players/assets/backgrounds/app-dark@tinypng.png": "1682b3f1f34c06e1f56636ce13c527063f880cab",
+    "/ottawa-hockey-players/assets/backgrounds/app@30.avif": "fbe36326833a78e0accffe5daf21b679a96ca939",
+    "/ottawa-hockey-players/assets/backgrounds/app@tinypng.png": "f8da68a2b3574c6ccca8e3e9ed2b9f702084296a",
+    "/ottawa-hockey-players/assets/data/free-agents.json": "3d8ec7cae7eee0d1bb0de90ec72912cc38033407",
+    "/ottawa-hockey-players/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/ottawa-hockey-players/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/ottawa-hockey-players/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/ottawa-hockey-players/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/ottawa-hockey-players/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/ottawa-hockey-players/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/ottawa-hockey-players/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/ottawa-hockey-players/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/ottawa-hockey-players/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/ottawa-hockey-players/index.html": "c6a555f1a5d608cb0b465a83583deaef99bb241f",
+    "/ottawa-hockey-players/main.d8c476a88cbe1b4c.js": "b09fea5b72781feb18d42e1faaa659389563faae",
+    "/ottawa-hockey-players/manifest.webmanifest": "9a088b7c4339228d1082e666ce105dc889bc180c",
+    "/ottawa-hockey-players/polyfills.d00ba71d24f64d98.js": "e2871550d4b6ac10614eeb52498712f2809fdbc2",
+    "/ottawa-hockey-players/runtime.231e96734c9fdc57.js": "7b949fafcdcfe1cb54b0460d09f1a6fe3b0d3864",
+    "/ottawa-hockey-players/styles.2a9f006cadbb6c6a.css": "a650e2b1b4279cfb421337c7247c564d4c3ccb05"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
