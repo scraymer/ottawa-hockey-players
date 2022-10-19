@@ -5,7 +5,6 @@ import { FreeAgentsStore } from '../free-agents.store';
 
 @Component({
   templateUrl: './free-agents-view.component.html',
-  styleUrls: ['./free-agents-view.component.scss'],
   providers: [FreeAgentsStore]
 })
 export class FreeAgentsViewComponent implements OnInit, OnDestroy  {

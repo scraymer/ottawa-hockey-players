@@ -3,7 +3,6 @@ import { AfterViewInit, ChangeDetectionStrategy, Component, HostListener } from 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements AfterViewInit {
