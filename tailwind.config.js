@@ -23,7 +23,7 @@ module.exports = {
       addVariant('scrollbar-thumb', '&::-webkit-scrollbar-thumb')
     }
   ],
-  purge: {
+  content: {
     enabled: true,
     content: [
       './src/**/*.{html,ts}'
