@@ -1,4 +1,5 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, ChangeDetectionStrategy, Component, HostListener, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements AfterViewInit {
   subtitle = 'Ottawa Hockey Players'
   opaque = false;
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: Document) { }
 
   /**
    * Check the scroll event class on view initialization.
@@ -38,7 +39,7 @@ export class HeaderComponent implements AfterViewInit {
 
   checkOpaqueClass() {
 
-    const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const offset = this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
     this.opaque = offset > 50;
   }
 }
