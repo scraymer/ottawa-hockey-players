@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1666719147246,
+  "timestamp": 1666721473690,
   "index": "/ottawa-hockey-players/index.html",
   "assetGroups": [
     {
@@ -61,19 +61,23 @@
         "/ottawa-hockey-players/assets/splashscreens/iphonexsmax_splash.png"
       ],
       "patterns": []
-    },
+    }
+  ],
+  "dataGroups": [
     {
       "name": "data",
-      "installMode": "prefetch",
-      "updateMode": "prefetch",
+      "patterns": [
+        "\\/ottawa-hockey-players\\/assets\\/data\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 10,
+      "maxAge": 86400000,
       "cacheQueryOptions": {
         "ignoreVary": true
       },
-      "urls": [],
-      "patterns": []
+      "version": 1
     }
   ],
-  "dataGroups": [],
   "hashTable": {
     "/ottawa-hockey-players/assets/backgrounds/app-dark@30.avif": "64c916902f317f0d3ead990b2accbac7e0232a97",
     "/ottawa-hockey-players/assets/backgrounds/app-dark@tinypng.png": "1682b3f1f34c06e1f56636ce13c527063f880cab",
