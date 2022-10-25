@@ -11,7 +11,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "http-server": "http-server -p 8080 -c-1 dist/app/browser",
-    "generate-free-agents": "python scripts/generate_free_agents.py > dist/app/browser/assets/data/free-agents.json"
+    "generate-free-agents": "python scripts/generate_free_agents.py > dist/app/browser/assets/data/free-agents.json",
+    "generate-app-icons": "npx ngx-pwa-icons -s \"512, 384, 192, 180, 152, 144, 128, 96, 72, 32, 16\" -i \"./src/assets/icons/icon.png\""
   },
   "private": true,
   "dependencies": {
@@ -52,6 +53,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ngx-pwa-icons": "^0.1.2",
     "postcss": "^8.4.18",
     "tailwindcss": "^3.1.8",
     "typescript": "~4.7.2"
