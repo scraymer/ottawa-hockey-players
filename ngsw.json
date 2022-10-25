@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1666676294929,
+  "timestamp": 1666678718604,
   "index": "/ottawa-hockey-players/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/ottawa-hockey-players/favicon.ico",
         "/ottawa-hockey-players/index.html",
-        "/ottawa-hockey-players/main.aa0868bddb2c2cb4.js",
+        "/ottawa-hockey-players/main.9f26afc3d41965d5.js",
         "/ottawa-hockey-players/manifest.webmanifest",
         "/ottawa-hockey-players/polyfills.d00ba71d24f64d98.js",
         "/ottawa-hockey-players/runtime.231e96734c9fdc57.js",
-        "/ottawa-hockey-players/styles.e7dfb67016448579.css"
+        "/ottawa-hockey-players/styles.dcf1645204564f00.css"
       ],
       "patterns": []
     },
@@ -62,12 +62,12 @@
     "/ottawa-hockey-players/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/ottawa-hockey-players/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/ottawa-hockey-players/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/ottawa-hockey-players/index.html": "1a5b7ebc2049d606257ceedf7b6bec54b05f2171",
-    "/ottawa-hockey-players/main.aa0868bddb2c2cb4.js": "66a35ac31cb4a0fcf4abd5b2366971a3fc551573",
+    "/ottawa-hockey-players/index.html": "57dfe41fa2bf72532f831ce4950e6532b8e5d5e1",
+    "/ottawa-hockey-players/main.9f26afc3d41965d5.js": "e19de004292410ee7df99bfa73ce2b0f825399bd",
     "/ottawa-hockey-players/manifest.webmanifest": "9a088b7c4339228d1082e666ce105dc889bc180c",
     "/ottawa-hockey-players/polyfills.d00ba71d24f64d98.js": "e2871550d4b6ac10614eeb52498712f2809fdbc2",
     "/ottawa-hockey-players/runtime.231e96734c9fdc57.js": "7b949fafcdcfe1cb54b0460d09f1a6fe3b0d3864",
-    "/ottawa-hockey-players/styles.e7dfb67016448579.css": "6dbf714829dd682722b50ce03aa6de0702a32547"
+    "/ottawa-hockey-players/styles.dcf1645204564f00.css": "c67405c8691bbe17b5b2132b87ede9417be25459"
   },
   "navigationUrls": [
     {
