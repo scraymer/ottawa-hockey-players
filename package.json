@@ -10,7 +10,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "http-server": "http-server -p 8080 -c-1 dist/app/browser"
+    "http-server": "http-server -p 8080 -c-1 dist/app/browser",
+    "generate-free-agents": "python scripts/generate_free_agents.py > dist/app/browser/assets/data/free-agents.json"
   },
   "private": true,
   "dependencies": {

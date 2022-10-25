@@ -59,7 +59,7 @@ jobs:
 
       - name: Generate Free Agents
         run: |
-          npm run generate-free-agents > dist/app/browser/assets/data/free-agents.json
+          npm run generate-free-agents
 
       - name: Upload Build
         uses: actions/upload-artifact@v1
