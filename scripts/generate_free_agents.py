@@ -11,6 +11,9 @@ CRHL_SOURCE_MAPPINGS = {
         'Availability': 'availability', 'Skill Level': 'skill_level',
         'Minimum Notice': 'minimum_notice', 'Contact Info': 'contact_info'
     },
+    'position_values': {
+      'Any': 'Defence/Forward', 'Defence': 'Defence', 'Forward': 'Forward', 'Goalie': 'Goalie'
+    },
     'skill_level_values': {
         'Division 1-3 (Highest)': 'High', 'Division 4-6': 'Medium', 'Division 7-30+': 'Low'
     }
@@ -71,6 +74,9 @@ class FreeAgentsManager(object):
         # split contact info values into email and phone columns
         table['email'] = table['contact_info'].str.lower().str.extract(r'(\S+@\S+)')
         table['phone'] = table['contact_info'].str.extract(r'(\d{3}[-\.\s]\d{3}[-\.\s]\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]\d{4}|\d{3}[-\.\s]\d{4})')
+
+        # normalize position values based on position mapping
+        table = table.replace({'position': CRHL_SOURCE_MAPPINGS['position_values']})
 
         # normalize skill level values based on skill level mapping
         table = table.replace({'skill_level': CRHL_SOURCE_MAPPINGS['skill_level_values']})

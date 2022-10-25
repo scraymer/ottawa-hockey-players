@@ -10,6 +10,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
+        python-version: [3.x]
 
     steps:
       - name: Checkout
@@ -22,6 +23,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
       - name: Setup Cache
         id: setup-cache
         uses: actions/cache@v2
@@ -30,6 +36,11 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
+      - name: Setup Virtual Environment
+        run: |
+          python -m venv .venv
+          source .venv/Scripts/activate
 
       - name: Define Environment Variables
         run: |
@@ -44,11 +55,16 @@ jobs:
         if: steps.setup-cache.outputs.cache-hit != 'true'
         run: |
           npm ci
+          pip install -r requirements.txt
 
       - name: Build
         run: |
           npm run clean
           npm run build:production
+
+      - name: Generate Free Agents
+        run: |
+          npm run generate-free-agents > dist/app/browser/assets/data/free-agents.json
 
       - name: Upload Build
         uses: actions/upload-artifact@v1
