@@ -40,6 +40,6 @@ export class HeaderComponent implements AfterViewInit {
   checkOpaqueClass() {
 
     const offset = this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
-    this.opaque = offset > 50;
+    this.opaque = offset > 15;
   }
 }

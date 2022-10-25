@@ -1,10 +1,10 @@
 <!-- Items section -->
-<section *ngIf="error === null" class="mt-8 p-4 grid gap-4 grid-cols-[repeat(auto-fill,_minmax(25rem,_1fr))]" role="main">
+<section *ngIf="error === null" class="p-4 grid gap-4 grid-cols-[repeat(auto-fill,_minmax(21rem,_1fr))] md:grid-cols-[repeat(auto-fill,_minmax(25rem,_1fr))]" role="main">
   <app-free-agents-card *ngFor="let item of items" [agent]="item"></app-free-agents-card>
 </section>
 
 <!-- Error section -->
-<section *ngIf="loading === false && error !== null" class="mt-8 p-4 w-full" role="status">
+<section *ngIf="loading === false && error !== null" class="p-4 w-full" role="status">
   <p class="text-center">
     {{ error }}
   </p>
