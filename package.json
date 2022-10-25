@@ -12,7 +12,7 @@
     "lint": "ng lint",
     "http-server": "http-server -p 8080 -c-1 dist/app/browser",
     "generate-free-agents": "python scripts/generate_free_agents.py > dist/app/browser/assets/data/free-agents.json",
-    "generate-app-icons": "npx ngx-pwa-icons -s \"512, 384, 192, 180, 152, 144, 128, 96, 72, 32, 16\" -i \"./src/assets/icons/icon.png\""
+    "generate-app-icons": "npx ngx-pwa-icons -s \"512, 384, 192, 180, 167, 152, 144, 128, 120, 96, 72, 32, 16\" -i \"./src/assets/icons/icon.png\""
   },
   "private": true,
   "dependencies": {
