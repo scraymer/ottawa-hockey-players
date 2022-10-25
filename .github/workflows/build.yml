@@ -27,6 +27,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
+          cache: 'pip'
 
       - name: Setup Cache
         id: setup-cache
@@ -46,10 +47,13 @@ jobs:
         run: |
           npm version ${{ env.PKG_VERSION }}-${{ env.PKG_VERSION_SUFFIX }} --no-git-tag-version
 
-      - name: Install
+      - name: Install Packages
         if: steps.setup-cache.outputs.cache-hit != 'true'
         run: |
           npm ci
+
+      - name: Install Scripts
+        run: |
           pip install -r requirements.txt
 
       - name: Build
