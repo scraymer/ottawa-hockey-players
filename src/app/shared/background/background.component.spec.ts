@@ -10,7 +10,7 @@ describe('BackgroundComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ BackgroundComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(BackgroundComponent);
     component = fixture.componentInstance;

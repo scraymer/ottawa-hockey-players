@@ -10,7 +10,7 @@ describe('FreeAgentsCardComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ FreeAgentsCardComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(FreeAgentsCardComponent);
     component = fixture.componentInstance;
