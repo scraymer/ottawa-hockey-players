@@ -25,15 +25,20 @@
           "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
       }
-    },
+    }
+  ],
+  "dataGroups": [
     {
       "name": "data",
-      "installMode": "prefetch",
-      "resources": {
-        "files": [
-          "/assets/data/**"
-        ]
-      }
+      "version": 1,
+      "cacheConfig": {
+        "maxSize": 10,
+        "maxAge": "1d",
+        "strategy": "freshness"
+      },
+      "urls": [
+        "assets/data/**"
+      ]
     }
   ]
 }
