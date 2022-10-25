@@ -37,11 +37,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Setup Virtual Environment
-        run: |
-          python -m venv .venv
-          source .venv/Scripts/activate
-
       - name: Define Environment Variables
         run: |
           echo "PKG_VERSION=$(node -p 'require('\''./package.json'\'').version')" >> $GITHUB_ENV
