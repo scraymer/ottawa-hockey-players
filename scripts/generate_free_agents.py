@@ -88,7 +88,7 @@ class FreeAgentsManager(object):
         table['source'] = 'CRHL'
 
         # transform table into list of free agents
-        agents = table.dropna().to_dict('records')
+        agents = table.to_dict('records')
 
         # return list of free agents
         return agents

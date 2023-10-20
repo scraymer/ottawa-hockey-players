@@ -32,7 +32,6 @@
     "skill_level": "Medium",
     "minimum_notice": "Same Day",
     "email": "jonathan.smith@example.com",
-    "phone": "613-555-1234",
     "source": "CRHL"
   },
   {
@@ -43,7 +42,6 @@
     "availability": "Any",
     "skill_level": "Medium",
     "minimum_notice": "One Day",
-    "email": "jonathan.smith@example.com",
     "phone": "613-555-1234",
     "source": "CRHL"
   },
@@ -55,8 +53,6 @@
     "availability": "Any",
     "skill_level": "Medium",
     "minimum_notice": "Same Day",
-    "email": "jonathan.smith@example.com",
-    "phone": "613-555-1234",
     "source": "CRHL"
   },
   {
@@ -92,7 +88,6 @@
     "skill_level": "Low",
     "minimum_notice": "Same Day",
     "email": "jonathan.smith@example.com",
-    "phone": "613-555-1234",
     "source": "CRHL"
   },
   {
@@ -151,7 +146,6 @@
     "availability": "Any",
     "skill_level": "High",
     "minimum_notice": "Same Day",
-    "email": "jonathan.smith@example.com",
     "phone": "613-555-1234",
     "source": "CRHL"
   },
@@ -163,8 +157,6 @@
     "availability": "Sun, Fri, Sat",
     "skill_level": "Medium",
     "minimum_notice": "Same Day",
-    "email": "jonathan.smith@example.com",
-    "phone": "613-555-1234",
     "source": "CRHL"
   },
   {
@@ -200,7 +192,6 @@
     "skill_level": "High",
     "minimum_notice": "Same Day",
     "email": "jonathan.smith@example.com",
-    "phone": "613-555-1234",
     "source": "CRHL"
   },
   {
@@ -535,7 +526,6 @@
     "availability": "Any",
     "skill_level": "High",
     "minimum_notice": "Same Day",
-    "email": "jonathan.smith@example.com",
     "phone": "613-555-1234",
     "source": "CRHL"
   },
@@ -571,8 +561,6 @@
     "availability": "Any",
     "skill_level": "High",
     "minimum_notice": "Same Day",
-    "email": "jonathan.smith@example.com",
-    "phone": "613-555-1234",
     "source": "CRHL"
   },
   {
