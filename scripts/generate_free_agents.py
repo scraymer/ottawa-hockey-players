@@ -1,7 +1,7 @@
 from __future__ import annotations
 from sys import version as sys_version
 from argparse import ArgumentParser
-from pandas import read_html
+from pandas import notnull, read_html
 from requests import get
 from json import dumps as to_json_str
 
@@ -88,7 +88,8 @@ class FreeAgentsManager(object):
         table['source'] = 'CRHL'
 
         # transform table into list of free agents
-        agents = table.to_dict('records')
+        # replaces NaN values with None for compatibility
+        agents = table.where(notnull(table), None).to_dict('records')
 
         # return list of free agents
         return agents
