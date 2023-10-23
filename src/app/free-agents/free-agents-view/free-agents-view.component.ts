@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { FormControl } from '@angular/forms';
+import { Subscription, debounceTime } from 'rxjs';
 import { IFreeAgent, IFreeAgentError } from '../free-agents';
 import { FreeAgentsStore } from '../free-agents.store';
 
@@ -18,15 +19,20 @@ export class FreeAgentsViewComponent implements OnInit, OnDestroy  {
   error: string | null = null;
   items: IFreeAgent[] = [];
   loading: boolean = false;
+  search = new FormControl<string>('');
 
   constructor(private store: FreeAgentsStore) { }
 
   ngOnInit(): void {
 
     // subscribe to different store observables and update attributes
-    this.store.error$.subscribe((value: IFreeAgentError | null) => this.error = this.resolveErrorMessage(value));
-    this.store.items$.subscribe((values: IFreeAgent[]) => this.items = values.sort(this.defaultSort));
-    this.store.loading$.subscribe((value: boolean) => this.loading = value);
+    this.subscriptions.add(this.store.error$.subscribe((value: IFreeAgentError | null) => this.error = this.resolveErrorMessage(value)));
+    this.subscriptions.add(this.store.items$.subscribe((values: IFreeAgent[]) => this.items = values.sort(this.defaultSort)));
+    this.subscriptions.add(this.store.loading$.subscribe((value: boolean) => this.loading = value));
+
+    // subscribe to search value changes and update free agent list
+    this.subscriptions.add(this.search.valueChanges.pipe(debounceTime(500)).subscribe(
+      (value) => this.store.retrieve(value).subscribe()));
 
     // retrieve latest store values initialization
     this.store.retrieve().subscribe();

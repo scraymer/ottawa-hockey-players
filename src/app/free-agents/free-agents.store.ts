@@ -4,6 +4,12 @@ import { BehaviorSubject, catchError, finalize, Observable, of, Subscription, ta
 import { IFreeAgent, IFreeAgentError } from "./free-agents";
 import { FreeAgentsService } from "./free-agents.service";
 
+const FILTER_JOIN_SYMBOL: string = '+';
+
+const ITEM_FILTER_KEYS: string[] = [
+  'name', 'position', 'skill_level', 'locale', 'availability', 'minimum_notice'
+];
+
 @Injectable()
 export class FreeAgentsStore {
 
@@ -22,9 +28,10 @@ export class FreeAgentsStore {
    * Retrieve latest free agents from free agents service and return http client observable with
    * auto unsubscribe.
    *
+   * @param filter optional string filter
    * @returns http client observable
    */
-  public retrieve(): Observable<IFreeAgent[]> {
+  public retrieve(filter?: string | null): Observable<IFreeAgent[]> {
 
     // update loading and error subjects
     this._loadingSubject.next(true);
@@ -40,7 +47,7 @@ export class FreeAgentsStore {
       }),
 
       // update items subject with results
-      tap((values: IFreeAgent[]) => this._itemsSubject.next(values ?? [])),
+      tap((values: IFreeAgent[]) => this._itemsSubject.next(this.filter(values ?? [], filter ?? ''))),
 
       // update loading subject when complete
       finalize(() => this._loadingSubject.next(false))
@@ -64,5 +71,24 @@ export class FreeAgentsStore {
 
     // return free agent error from code and message
     return { code, message };
+  }
+
+  /**
+   * Return filtered list of items by string value. Use plus (+) sign for multiple search values.
+   *
+   * @param items list of items to filter
+   * @param filter filter string value
+   * @returns filtered list of items
+   */
+  private filter(items: IFreeAgent[], filter: string): IFreeAgent[] {
+
+    // split filter on joining symbol
+    let filters: string[] = filter.split(FILTER_JOIN_SYMBOL);
+
+    // filter items by filter keys
+    return filters.length === 0 ? items : items.filter(
+      (i) => filters.every(
+        (f) => ITEM_FILTER_KEYS.some(
+          (k) => i[k as keyof IFreeAgent].toLowerCase().includes(f.toLowerCase()))));
   }
 }
