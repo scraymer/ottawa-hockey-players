@@ -5,7 +5,6 @@ import { IFreeAgent, IFreeAgentError } from "./free-agents";
 import { FreeAgentsService } from "./free-agents.service";
 
 const FILTER_JOIN_SYMBOL: string = '+';
-
 const ITEM_FILTER_KEYS: string[] = [
   'name', 'position', 'skill_level', 'locale', 'availability', 'minimum_notice'
 ];
@@ -88,7 +87,7 @@ export class FreeAgentsStore {
     // filter items by filter keys
     return filters.length === 0 ? items : items.filter(
       (i) => filters.every(
-        (f) => ITEM_FILTER_KEYS.some(
-          (k) => i[k as keyof IFreeAgent].toLowerCase().includes(f.toLowerCase()))));
+        (f) => f.trim() === '' || ITEM_FILTER_KEYS.some(
+          (k) => i[k as keyof IFreeAgent].toLowerCase().includes(f.trim().toLowerCase()))));
   }
 }
